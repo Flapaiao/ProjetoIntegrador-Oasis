@@ -22,8 +22,7 @@ USE `db_oasis` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_oasis`.`tb_categorias` (
   `id_categoria` BIGINT NOT NULL AUTO_INCREMENT,
-  `tipo` VARCHAR(255) NOT NULL,
-  `descricao` VARCHAR(255) NOT NULL,
+  `tipo` VARCHAR(255) NOT NULL
   PRIMARY KEY (`id_categoria`))
 ENGINE = InnoDB;
 
@@ -34,7 +33,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `db_oasis`.`tb_usuarios` (
   `id_usuarios` BIGINT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(255) NOT NULL,
-  `nome_usuario` VARCHAR(255) NOT NULL,
+  `nomeUsuario` VARCHAR(255) NOT NULL,
   `senha` VARCHAR(255) NOT NULL,
   `foto` VARCHAR(255) NULL,
   PRIMARY KEY (`id_usuarios`))
@@ -46,9 +45,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_oasis`.`tb_produtos` (
   `id_produtos` BIGINT NOT NULL AUTO_INCREMENT,
-  `nome_produto` VARCHAR(255) NOT NULL,
+  `nomeProduto` VARCHAR(255) NOT NULL,
   `preco` DECIMAL(8,2) NOT NULL,
-  `data_validade` DATE NOT NULL,
+  `dataValidade` DATE NOT NULL,
   `estoque` VARCHAR(255) NOT NULL,
   `tb_categorias_id` BIGINT NOT NULL,
   `tb_usuarios_id` BIGINT NOT NULL,
